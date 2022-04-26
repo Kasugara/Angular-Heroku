@@ -65,8 +65,8 @@ import { KekwComponent } from './kekw/kekw.component';
     MaterialExampleModule
   ],
 
-  providers: [authInterceptorProviders, {provide: APP_BASE_HREF, useValue : '/' }, EmployeeService, MessageService ],
-  
+  providers: [authInterceptorProviders, EmployeeService, MessageService ],
+  // , {provide: APP_BASE_HREF, useValue : '/' }
   bootstrap: [AppComponent]
 })
 export class AppModule { }
