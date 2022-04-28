@@ -4,13 +4,14 @@ import { Employee } from '../model/employee';
 import { EmployeeService } from '../_services/employee.service';
 import { MessageService } from '../_services/message.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import swal from 'sweetalert';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AddemployeeComponent } from '../addemployee/addemployee.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ViewChild } from '@angular/core';
+import Swal from 'sweetalert2';
+
 
 
 
@@ -329,24 +330,23 @@ console.log(this.employeeService.getEmployeesList);
     )
   }
 
-  deleteSelectedEmployee(employeeId: number){
-    swal({
-      title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover!",
-      icon: "warning",
-      buttons: [true, true],
-      dangerMode: true,
-    })
-    .then((willDelete) => {
-      if (willDelete) {
-        this.employeeService.deleteEmployee(employeeId).subscribe(
-          (response)=>{
-            this.viewEmployeeList(this.dataSource);
-        this.messageService.showSuccessMessage("Successfully Deleted","");
-        })
-      } 
-    })
-}
+//   deleteSelectedEmployee(employeeId: number){
+//     Swal.fire({
+//       title: "Are you sure?",
+//       text: "Once deleted, you will not be able to recover!",
+//       icon: "warning",
+     
+//     })
+//     .then((willDelete) => {
+//       if (willDelete) {
+//         this.employeeService.deleteEmployee(employeeId).subscribe(
+//           (response)=>{
+//             this.viewEmployeeList(this.dataSource);
+//         this.messageService.showSuccessMessage("Successfully Deleted","");
+//         })
+//       } 
+//     })
+// }
 
 
 
