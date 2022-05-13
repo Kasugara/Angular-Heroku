@@ -85,38 +85,9 @@
             </tr>
           </table>
       
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]" aria-label="Select page of users"></mat-paginator>
         </div>
       </table>
-        <!-- <thead class="thead-dark">
-          <tr>
-            <th>Nama</th>
-            <th>Email</th>
-            <th>Nomor Hp</th>
-            <th>Status</th>
-            <th>Menu</th>
-          </tr>
-        </thead>
-        <tbody> 
-          <tr *ngFor =" let employee of employees; let i=index">
-            <td>{{employee.namaLengkap}}</td>
-            <td>{{employee.emailemp}}</td>
-            <td>{{employee.noHP}}</td>
-            <td>{{employee.statusKerja}} </td>  
-            <td> -->
-              
-              <!-- <button 
-              type="submit" 
-              class="btn btn-primary" 
-              (click)="editSelectedEmployee(employee.employeeId,mymodaledit)" 
-              style="margin:5px">Edit</button> 
-              <button 
-              type="submit" 
-              class="btn btn-secondary" 
-              (click)="viewSelectedEmployee(employee.employeeId,mymodalview)" 
-              style="margin:5px">View</button>  -->
-              
-              
            
               <ng-template #mymodaledit let-modal>
                 <div class="modal-header"> Edit Data Karyawan
