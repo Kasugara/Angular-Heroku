@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://mrrealtydbe.herokuapp.com/'
+  apiBaseUrl: 'https://mrrealtydbe.herokuapp.com'
 };
