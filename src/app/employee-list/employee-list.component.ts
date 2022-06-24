@@ -4,14 +4,14 @@ import { Employee } from '../model/employee';
 import { EmployeeService } from '../_services/employee.service';
 import { MessageService } from '../_services/message.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AddemployeeComponent } from '../addemployee/addemployee.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ViewChild } from '@angular/core';
-import Swal from 'sweetalert2';
+
 
 
 

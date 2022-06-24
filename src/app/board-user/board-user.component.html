@@ -50,66 +50,31 @@
               <td mat-cell *matCellDef="let row"> {{row.nomorHP}} </td>
             </ng-container>
                 
-            <ng-container matColumnDef="divisi">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header> Divisi </th>
-              <td mat-cell *matCellDef="let row"> {{row.divisi}} </td>
-            </ng-container>
+            <ng-container class="ColumnTable1" matColumnDef="menu">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu View</th>
+              <td mat-cell *matCellDef="let row">
+                
+                <button 
+                type="submit" 
+                class="btn btn-secondary" 
+                (click)="viewSelectedEmployee(row.employeeId,mymodalview)" 
+                style="margin:5px">View</button>
+    
+              </td>         
+              </ng-container> 
+              
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-          <ng-container matColumnDef="menu">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu</th>
-          <td mat-cell *matCellDef="let row">
-            
-            <button 
-            type="submit" 
-            class="btn btn-secondary" 
-            (click)="viewSelectedEmployee(row.employeeId,mymodalview)" 
-            style="margin:5px">View</button>
-            
-                      
-          </td>         
-          </ng-container>  
-          
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-            <tr class="mat-row" *matNoDataRow>
-              <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-            </tr>
-          </table>
-      
-          <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]" aria-label="Select page of users"></mat-paginator>
-        </div>
-        </table>
-        <!-- <thead class="thead-dark">
-          <tr>
-            <th>Nama</th>
-            <th>Email</th>
-            <th>Nomor Hp</th>
-            <th>Status</th>
-            <th>Menu</th>
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
           </tr>
-        </thead>
-        <tbody> 
-          <tr *ngFor =" let employee of employees; let i=index">
-            <td>{{employee.namaLengkap}}</td>
-            <td>{{employee.emailemp}}</td>
-            <td>{{employee.noHP}}</td>
-            <td>{{employee.statusKerja}} </td>  
-            <td> -->
-              
-              <!-- <button 
-              type="submit" 
-              class="btn btn-primary" 
-              (click)="editSelectedEmployee(employee.employeeId,mymodaledit)" 
-              style="margin:5px">Edit</button> 
-              <button 
-              type="submit" 
-              class="btn btn-secondary" 
-              (click)="viewSelectedEmployee(employee.employeeId,mymodalview)" 
-              style="margin:5px">View</button>  -->
-              
-              
-           
+        </table>
+    
+        <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+      </table>    
+                                       
               <ng-template #mymodaledit let-modal>
                 <div class="modal-header"> Edit Data Karyawan
                   <button type="button" class="close" aria-label="Close" (click)="modal.editSelectedEmployee">
