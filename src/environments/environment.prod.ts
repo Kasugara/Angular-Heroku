@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://mr-realty-dbe.herokuapp.com'
+  apiBaseUrl: 'https://mrrealtydbe.herokuapp.com/'
 };
