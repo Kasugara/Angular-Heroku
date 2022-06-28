@@ -105,5 +105,8 @@
       }
     }
   },
-  "defaultProject": "WholeNewWorldLoginEmployee"
+  "defaultProject": "WholeNewWorldLoginEmployee",
+  "cli": {
+    "analytics": "ad733fc0-e6d2-4244-acf0-7ad9047c5ed7"
+  }
 }
