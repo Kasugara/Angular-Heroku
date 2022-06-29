@@ -34,7 +34,7 @@ export class EmployeeListComponent implements OnInit {
   pagesize= 5;
   pageSizes = [5,10,20];
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['namaLengkap', 'emailemp', 'noHP', 'divisi','menu'];
+  displayedColumns: string[] = ['namaLengkap', 'emailemp', 'noHP', 'menu','menu1','menu2'];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort; 
 
