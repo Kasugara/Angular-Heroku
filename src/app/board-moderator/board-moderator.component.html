@@ -4,9 +4,9 @@
 <br><br>
 <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Tambah Karyawan</button>
 <br>
-<mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+<mat-form-field appearance="standard" class="CariKary">
+  <mat-label>Cari Karyawan</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
 </mat-form-field>
 
 
@@ -69,7 +69,7 @@
               </td>         
               </ng-container>  
     
-              <ng-container class="ColumnTable1" matColumnDef="menu">
+              <ng-container class="ColumnTable1" matColumnDef="menu1">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu View</th>
                 <td mat-cell *matCellDef="let row">
                   
