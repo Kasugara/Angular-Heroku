@@ -10,7 +10,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ViewChild } from '@angular/core';
-import Swal from 'sweetalert2';
+
 
 
 
@@ -29,7 +29,7 @@ export class BoardUserComponent implements OnInit {
 
   page = 1;
   count= 0;
-  pagesize= 10;
+  pagesize= 5;
   pageSizes = [5,10,20];
   dataSource = new MatTableDataSource();
   displayedColumns: string[] = ['namaLengkap', 'emailemp', 'noHP','menu'];
@@ -329,33 +329,6 @@ console.log(this.employeeService.getEmployeesList);
     error=>console.log("exception occure")
     )
   }
-
-//   deleteSelectedEmployee(employeeId: number){
-//     Swal.fire({
-//       title: "Are you sure?",
-//       text: "Once deleted, you will not be able to recover!",
-//       icon: "warning",
-     
-//     })
-//     .then((willDelete) => {
-//       if (willDelete) {
-//         this.employeeService.deleteEmployee(employeeId).subscribe(
-//           (response)=>{
-//             this.viewEmployeeList(this.dataSource);
-//         this.messageService.showSuccessMessage("Successfully Deleted","");
-//         })
-//       } 
-//     })
-// }
-
-
-
-
-
-
-
-
-
 }
 
 

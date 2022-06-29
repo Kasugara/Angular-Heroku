@@ -329,33 +329,6 @@ console.log(this.employeeService.getEmployeesList);
     )
   }
 
-  deleteSelectedEmployee(employeeId: number){
-    Swal.fire({
-      title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    })
-    .then((willDelete) => {
-      if (willDelete) {
-        this.employeeService.deleteEmployee(employeeId).subscribe(
-          (response)=>{
-            this.viewEmployeeList(this.dataSource);
-        this.messageService.showSuccessMessage("Successfully Deleted","");
-        })
-      } 
-    })
-}
-
-
-
-
-
-
-
 
 
 }

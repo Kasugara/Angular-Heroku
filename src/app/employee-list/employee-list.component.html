@@ -49,8 +49,21 @@
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Nomor HP </th>
               <td mat-cell *matCellDef="let row"> {{row.nomorHP}} </td>
             </ng-container>
+
+            <ng-container class="ColumnTable1" matColumnDef="menu1">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu View</th>
+              <td mat-cell *matCellDef="let row">
                 
-            <ng-container class="ColumnTable1" matColumnDef="menu">
+                <button 
+                type="submit" 
+                class="btn btn-secondary" 
+                (click)="viewSelectedEmployee(row.employeeId,mymodalview)" 
+                style="margin:5px">View</button>
+    
+              </td>         
+              </ng-container> 
+                
+            <ng-container class="ColumnTable1" matColumnDef="menu1">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu Update</th>
               <td mat-cell *matCellDef="let row">
                 
@@ -63,18 +76,6 @@
               </td>         
               </ng-container>  
     
-              <ng-container class="ColumnTable1" matColumnDef="menu1">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu View</th>
-                <td mat-cell *matCellDef="let row">
-                  
-                  <button 
-                  type="submit" 
-                  class="btn btn-secondary" 
-                  (click)="viewSelectedEmployee(row.employeeId,mymodalview)" 
-                  style="margin:5px">View</button>
-      
-                </td>         
-                </ng-container> 
                 <ng-container class="ColumnTable1" matColumnDef="menu2">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu Delete</th>
                   <td mat-cell *matCellDef="let row">

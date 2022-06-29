@@ -57,6 +57,19 @@
             </ng-container>
 
             <ng-container class="ColumnTable1" matColumnDef="menu">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu View</th>
+              <td mat-cell *matCellDef="let row">
+                
+                <button 
+                type="submit" 
+                class="btn btn-secondary" 
+                (click)="viewSelectedEmployee(row.employeeId,mymodalview)" 
+                style="margin:5px">View</button>
+    
+              </td>         
+              </ng-container> 
+
+            <ng-container class="ColumnTable1" matColumnDef="menu1">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu Update</th>
               <td mat-cell *matCellDef="let row">
                 
@@ -67,20 +80,7 @@
                 style="margin:5px">Update</button> 
     
               </td>         
-              </ng-container>  
-    
-              <ng-container class="ColumnTable1" matColumnDef="menu1">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Menu View</th>
-                <td mat-cell *matCellDef="let row">
-                  
-                  <button 
-                  type="submit" 
-                  class="btn btn-secondary" 
-                  (click)="viewSelectedEmployee(row.employeeId,mymodalview)" 
-                  style="margin:5px">View</button>
-      
-                </td>         
-                </ng-container> 
+              </ng-container>                  
           
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
